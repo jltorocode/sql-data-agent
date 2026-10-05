@@ -1,0 +1,11 @@
+# A PostgreSQL for the demo, if you don't have one:
+#   docker compose up -d
+#   ADMIN_DATABASE_URL=postgres://postgres:postgres@localhost:5433/postgres npm run db:setup
+#   then DATABASE_URL=postgres://agent_reader:reader@localhost:5433/sql_agent_demo
+services:
+  postgres:
+    image: postgres:18
+    environment:
+      POSTGRES_PASSWORD: postgres
+    ports:
+      - '5433:5432'
